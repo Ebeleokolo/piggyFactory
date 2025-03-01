@@ -23,12 +23,15 @@ contract PiggyBankFactory {
         developer = _developer;
     }
 
-    // Modifier to check if bank is still active
-    modifier isWithdrawn(PiggyBank bank) {
-        if(bank.withdrawn()) revert AlreadyWithdrawn();
-        _;
-    }
-
+    // // Modifier to check if bank is still active
+    // modifier isWithdrawn(PiggyBank bank) {
+    //     if(bank.isWithdrawn()) revert AlreadyWithdrawn();
+    //     _;
+    // }
+    // modifier isWithdrawn(PiggyBank bank) {
+    // if(!allPiggyBanks[i].withdrawn()) revert AlreadyWithdrawn()
+    //      _ ;
+    // }
     function createPiggyBank(
         string memory purpose, 
         uint256 unlockTime,

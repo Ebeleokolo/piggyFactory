@@ -9,7 +9,7 @@ contract PiggyBank {
     address public owner;
     uint256 public unlockTime;
     string public purpose;
-    bool private withdrawn;
+    bool public withdrawn;
 
     mapping(address => bool) public allowedTokens;
 
